@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A-Coffee | Premium Coffee</title>
+  <link rel="stylesheet" href="./css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="./js.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar container">
+    <a href="#home" class="logo">☕ A-Coffee</a>
+
+    <button class="menu-toggle" id="menu-open" aria-label="Menyuni ochish">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#home">Bosh sahifa</a></li>
+      <li><a href="#about">Biz haqimizda</a></li>
+      <li><a href="#menu">Menyu</a></li>
+      <li><a href="#gallery">Galereya</a></li>
+      <li><a href="#contact">Aloqa</a></li>
+      <li><button id="open-cart" class="cart-button">
+        <i class="fa-solid fa-bag-shopping"></i> Savatcha (<span id="cart-count">0</span>)
+      </button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="eyebrow">☕ HAR KUNINGIZGA LAZZAT</span>
+        <h1>Bir finjon qahva,<br><span>ming xil kayfiyat.</span></h1>
+        <p>Yangi damlangan qahva, mazali shirinliklar va yoqimli muhit. O'zingizga bir oz vaqt ajrating.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">Menyuni ko'rish <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#about" class="btn btn-outline">Biz haqimizda</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85" alt="Mazali qahva">
+        <div class="image-badge">⭐ Barista tanlovi<br><small>Har kuni yangi ta'm</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container features-grid">
+      <div><i class="fa-solid fa-seedling"></i><h3>Sifatli donlar</h3><p>Saralangan qahva</p></div>
+      <div><i class="fa-solid fa-mug-hot"></i><h3>Yangi tayyorlanadi</h3><p>Har bir finjon mehr bilan</p></div>
+      <div><i class="fa-solid fa-heart"></i><h3>Samimiy muhit</h3><p>Yoqimli dam olish</p></div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=85" alt="Coffee House muhiti">
+      <div>
+        <span class="eyebrow">BIZNING HIKOYA</span>
+        <h2>Oddiy qahvadan ko'ra <span>ko'proq.</span></h2>
+        <p>Coffee House — mazali qahva, shirinliklar va samimiy suhbatlar uchun yaratilgan maskan. Biz har bir buyurtmaga alohida e'tibor beramiz.</p>
+        <p>Do'stlaringiz bilan uchrashing, dam oling va sevimli ichimligingizdan bahramand bo'ling.</p>
+        <a href="#menu" class="btn btn-primary">Menyuni ko'rish</a>
+        <div class="socials">
+          <a href="https://www.instagram.com/hamidivic_01?dlrf=eWU0d2djNHJ2bHkw" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me/acoffeehouse" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">MAZALI TANLOV</span>
+        <h2>Bizning <span>menyu</span></h2>
+        <p>Sevimli mahsulotingizni tanlang va savatchaga qo'shing.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="all">Barchasi</button>
+        <button class="filter" data-category="coffee">Qahvalar</button>
+        <button class="filter" data-category="cold">Sovuq ichimliklar</button>
+        <button class="filter" data-category="dessert">Shirinliklar</button>
+        <button class="filter" data-category="food">Yeguliklar</button>
+      </div>
+
+      <input id="search" class="search" type="search" placeholder="🔎 Menyudan qidirish...">
+      <div class="menu-list" id="menu-list"></div>
+      <p id="empty-message" hidden>Mahsulot topilmadi.</p>
+      <p class="note">* Narxlar namuna sifatida kiritilgan.</p>
+    </div>
+  </section>
+
+  <section class="promo">
+    <div class="container promo-content">
+      <div><span class="eyebrow">O'ZINGIZGA SOVG'A</span><h2>Baxt — bir finjon qahva.</h2><p>Bugun o'zingizga mazali tanaffus sovg'a qiling.</p></div>
+      <a href="#menu" class="btn btn-primary">Buyurtma berish →</a>
+    </div>
+  </section>
+
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">BIZNING MUHIT</span>
+        <h2>Qahva lahzalari</h2>
+        <p>Ta'm, hid va yoqimli muhit.</p>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Qahva donlari" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80" alt="Latte" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Kofeynya" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80" alt="Shirinlik" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Sovuq qahva" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=700&q=80" alt="Qahva tayyorlash" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">BIZ BILAN BOG'LANING</span>
+        <h2>Sizni kutamiz</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><i class="fa-solid fa-location-dot"></i> Toshkent, O'zbekiston</p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:+998704880986">+998 70 488 09 86</a></p>
+          <p><i class="fa-solid fa-envelope"></i> hamidivic01@gmail.com</p>
+          <p><i class="fa-solid fa-clock"></i> Har kuni: 09:00–22:00</p>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <input id="contact-name" type="text" placeholder="Ismingiz" required maxlength="80">
+          <input id="contact-email" type="email" placeholder="Email manzilingiz" required maxlength="120">
+          <textarea id="contact-message" placeholder="Xabaringiz..." required maxlength="2000"></textarea>
+          <button class="btn btn-primary" type="submit">Email orqali yuborish <i class="fa-solid fa-paper-plane"></i></button>
+          <small>Email dasturingiz ochiladi; serverga avtomatik yuborish sozlanmagan.</small>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <a href="#home" class="logo">☕ A-Coffee</a>
+    <p>Har finjonda bir hikoya. ♥</p>
+    <p>© <span id="year"></span> Coffee House</p>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Savatcha">
+  <div class="cart-header">
+    <h2>🛒 Savatcha (<span id="drawer-count">0</span>)</h2>
+    <button id="close-cart" aria-label="Savatchani yopish">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <h3>Jami: <span id="total">0 so'm</span></h3>
+    <input id="customer-name" type="text" placeholder="Ismingiz" maxlength="80">
+    <input id="customer-phone" type="tel" placeholder="Telefon raqamingiz" maxlength="25">
+    <input id="customer-address" type="text" placeholder="Manzil (ixtiyoriy)" maxlength="200">
+    <button id="checkout" class="btn btn-primary">Telegram orqali buyurtma</button>
+    <small>Buyurtma Telegram ulashish oynasida ochiladi.</small>
+  </div>
+</aside>
+
+<div id="toast" class="toast" role="status"></div>
+
+</body>
+</html>
